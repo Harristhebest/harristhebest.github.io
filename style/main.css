@@ -1,0 +1,22 @@
+body{
+    background: green;
+}
+.button_grp{
+    text-align: center;
+    border: 5px solid grey;
+    padding: 5vw;
+}
+#name_title{
+    text-align: center;
+}
+.button_grp >button{
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#count {
+    text-align: center;
+    font: 3em Consolas, Arial, bold,sans-serif;
+    color:aliceblue
+}
