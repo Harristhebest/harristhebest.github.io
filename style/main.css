@@ -1,10 +1,133 @@
-body{
-    background: green;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@300&family=Quicksand:wght@300&family=Salsa&display=swap');:root{
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --light-color: #60BF81 ;
+    --body-color: #3B8C66;
+    --heading-color: #005C53;
+    --contrast-color: #D6D58E;
+    --trans-color:216,255,219;
 }
-footer{
-    text-align: center;
+a{
+    color:var(--light-color);
+}
+a:hover{
+    color:var(--contrast-color);
+}
+main{
+    background-color: rgba(var(--trans-color),0.5);
+}
+body{
+    line-height: 1.5;
+    font-size: 18px;
+    padding-left: 2em;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    color: rgba(var(--body-color),0.7);
+}
+h1,h2,h3{
+    line-height: 1.3;
+    color:var(--heading-color);
 }
 
-#name_title{
-    text-align: center;
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+body#about img{height: 15em;}
+
+p{
+    max-width: 50em;
+    font-family: 'Salsa', cursive;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "head head"
+                         "nav nav"
+                         "main main"
+                         "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+    background-color: #FFDEE9;
+
+}
+
+nav{
+    font-size: 30px;
+}
+@media screen and (min-width: 24em){
+    body{
+        grid-template-areas: "head head"
+        "nav main"
+        "foot foot";    
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto 1fr auto;
+
+    }
+}
+
+body > *{
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+
+}
+
+
+
+body > header{
+    grid-area: head;
+}
+body > nav{
+    grid-area: nav;
+    font-family: 'Quicksand', sans-serif;
+}
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+body > main{
+    grid-area: main;
+
+}
+body > footer{
+    grid-area: foot;
+    font-family: 'Quicksand', sans-serif;
+}
+header,footer{
+    padding-top:var(--vertical-space);
+    padding-bottom:var(--horizontal-space);
+
+}
+
+#portfolio h2{
+    font-family: 'Salsa', cursive;
+
+}
+#Resume li{
+    font-family: 'Quicksand', sans-serif;
+}
+
+header h1,footer h1{
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems{
+    display: flex;
+    flex-wrap: wrap;
+    flex:1;
+    list-style-type: none;
+    padding:0;
+}
+
+
+body#portfolio ul#portfolioItems li img{
+    max-width: 100%;
+    width: 318px;
+    height: 238px;
+}
+
+@media screen and (min-width: 24em){
+    body#portfolio ul#portfolioItems li{
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
 }
